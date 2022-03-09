@@ -4,10 +4,11 @@ class StudentsController < ApplicationController
 
     # Our API endpoint
     get '/students' do
-
-        students = Student.all.order(:student_name).limit(10)
-        #demand is sent to student model
-        students.to_json(only: [:student_name, :age], include: :school)
+        # Student.all.to_json
+        students = Student.all.order(:student_name)
+        # #demand is sent to student model
+        # students.to_json(only: [:student_name, :age], include: :school)
+        students.to_json(include: :school)
     end
 
     #Retrieve individual student via param (:id)

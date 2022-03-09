@@ -1,12 +1,15 @@
 class SchoolsController < ApplicationController
     get '/schools' do
-        schools = School.all
-        # schools.to_json(include: :students)
-        schools.to_json(
-            only: [:school_name], 
-            include: { students: 
-                { only: [:student_name, :gender] }
-        }) 
+
+        School.all.to_json
+
+        # schools = School.all
+        # # schools.to_json(include: :students)
+        # schools.to_json(
+        #     only: [:school_name], 
+        #     include: { students: 
+        #         { only: [:student_name, :gender] }
+        # }) 
     end
 
     get '/schools/:id' do
