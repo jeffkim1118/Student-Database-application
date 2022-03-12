@@ -23,7 +23,8 @@ function App() {
     fetch('http://localhost:9292/students',{
       method:'POST',
       headers:{
-        'Content-Type':'application/json'
+        'Content-Type':'application/json',
+        'Accept': 'application/json'
       },
       body: JSON.stringify(student)
     })
@@ -60,7 +61,7 @@ function App() {
     })
     .then(res => res.json())
     .then(() => {
-      setStudents(students.filter(p => p.id !== id))
+      setStudents(students.filter(st => st.id !== id))
     })
   }
   return (

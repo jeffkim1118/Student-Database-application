@@ -1,4 +1,5 @@
 import {useState} from 'react'
+
 function CreateForm({postStudent, schools}){
     const [formData, setFormData] = useState({
         name:'',

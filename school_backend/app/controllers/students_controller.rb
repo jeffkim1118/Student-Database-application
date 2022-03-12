@@ -16,4 +16,27 @@ class StudentsController < ApplicationController
         Student.find(params[:id]).to_json(include: :appointments)
     end
 
+    post "/students" do
+        student = Student.create({name:params[:student_name],
+            age:params[:age], gender:params[:gender],
+            phone:params[:phone], active:params[:active], 
+            school_id:params[:school_id]})
+            student.to_json(include: :school)
+    end
+
+    patch "/students/:id" do
+        student = Student.find(params[:id])
+        student.update({name:params[:student_name],
+            age:params[:age], gender:params[:gender],
+            phone:params[:phone], active:params[:active], 
+            school_id:params[:school_id]})
+            student.to_json(include: :school)
+    end
+
+    delete "/students/:id" do
+        student = Student.find(params[:id])
+        student.destroy
+        {message: 'student deleted from our database'}.to_json
+    end
+
 end

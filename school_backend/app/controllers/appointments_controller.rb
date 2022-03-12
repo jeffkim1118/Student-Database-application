@@ -1,12 +1,12 @@
 class AppointmentsController < ApplicationController
     
-    get '/appointments/earliest' do
-        Appointment.earliest.to_json
-    end
+    # get '/appointments/earliest' do
+    #     Appointment.earliest.to_json
+    # end
 
-    get '/appointments/latest' do
-        Appointment.latest.to_json
-    end
+    # get '/appointments/latest' do
+    #     Appointment.latest.to_json
+    # end
 
     
     get '/appointments' do
