@@ -17,7 +17,7 @@ class StudentsController < ApplicationController
     end
 
     post "/students" do
-        student = Student.create({name:params[:student_name],
+        student = Student.create({student_name:params[:name],
             age:params[:age], gender:params[:gender],
             phone:params[:phone], active:params[:active], 
             school_id:params[:school_id]})
@@ -26,7 +26,7 @@ class StudentsController < ApplicationController
 
     patch "/students/:id" do
         student = Student.find(params[:id])
-        student.update({name:params[:student_name],
+        student.update({student_name:params[:name],
             age:params[:age], gender:params[:gender],
             phone:params[:phone], active:params[:active], 
             school_id:params[:school_id]})

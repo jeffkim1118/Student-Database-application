@@ -24,13 +24,12 @@ function App() {
       method:'POST',
       headers:{
         'Content-Type':'application/json',
-        'Accept': 'application/json'
       },
       body: JSON.stringify(student)
     })
     .then(res => res.json())
     .then(newStudent => {
-      setStudents([newStudent,...student])
+      setStudents([newStudent,...students])
     })
   }
 //patches student
