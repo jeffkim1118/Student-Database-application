@@ -78,3 +78,11 @@ useEffect(()=> {
     .then(setSchools)
   },[])
 ```
+
+### NOTE
+Please start the backend server first before starting the React.
+
+To start the backend server, simply move to school_backend directory and type in:
+```Console
+bundle exec rake server
+```
