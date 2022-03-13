@@ -5,3 +5,4 @@
     2. It must be able to perform CRUD through GUI (Graphical User Interface)
     3. The backend should include at least 2 models.
     
+![image](https://user-images.githubusercontent.com/64029918/158064332-a01d89a8-c376-400b-b827-bddddc1583a7.png)
