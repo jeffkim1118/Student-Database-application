@@ -13,9 +13,25 @@ Here's my simple looking graphical user interface created with React framework.
 The top of the application contains a form component where users can type and submit new student data to my sinatra backend database.
 I used active record gem to create connections between different class models: students, schools.
 
-![image](https://user-images.githubusercontent.com/64029918/158064637-bec31b58-22a8-4933-8112-10fe505d151c.png)
+```class Student < ActiveRecord::Base
+    belongs_to :school
+    has_many :appointments
+    has_many :teachers, through: :appointments
+
+
+    def print 
+        puts "Name: #{self.name}"
+        puts "Age: #{self.age}"
+        puts "Gender: #{self.gender}"
+        puts "Phone number #{self.phone}"
+    end 
+end```
+
 ![image](https://user-images.githubusercontent.com/64029918/158064647-29ebe9d2-b4fd-4e36-b6dc-7b920af11f43.png)
 
 Since schools have many students, I created a one to many relationships between two of the models.
 
-###
+### How does it work?
+Just like how developers makes an API calls to perform CRUD actions, I simply created an API with a database that can be called from my react frontend using simple fetch request.
+![image](https://user-images.githubusercontent.com/64029918/158064844-fea045f7-87e4-4b5a-849b-49c151971ea7.png)
+If I submit data from my frontend, it will then proceed to make a GET request to local host server 9292 because this is the default local host server for Sinatra.
