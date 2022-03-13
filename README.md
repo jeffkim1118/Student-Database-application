@@ -10,7 +10,7 @@ For this project, I have decided to create a simple student database app using R
 I figured that it would be useful for me later on since I work at a middle school as a part-time IT tech.
 Here's my simple looking graphical user interface created with React framework.
 <div align="center">
-<img src="https://user-images.githubusercontent.com/64029918/158064332-a01d89a8-c376-400b-b827-bddddc1583a7.png" width="700" height="400">
+<img src="https://user-images.githubusercontent.com/64029918/158064332-a01d89a8-c376-400b-b827-bddddc1583a7.png" width="600" height="400">
 </div>
 The top of the application contains a form component where users can type and submit new student data to my sinatra backend database.
 I used active record gem to create connections between different class models: students, schools.
@@ -41,7 +41,11 @@ Since schools have many students, I created a one to many relationships between 
 
 ## How does it work?
 Just like how developers makes an API calls to perform CRUD actions, I simply created an API with a database that can be called from my react frontend using simple fetch request.
-![image](https://user-images.githubusercontent.com/64029918/158064844-fea045f7-87e4-4b5a-849b-49c151971ea7.png)
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/64029918/158064844-fea045f7-87e4-4b5a-849b-49c151971ea7.png" width="600" height="400">
+</div>
+
 If I submit/Patch/Delete data from my frontend, it will then proceed to make a POST/Patch/Delete request to local host server 9292 because this is the default local host server for Sinatra.
 Here's a post request that I made:
 ```Ruby
