@@ -1,5 +1,7 @@
 .App {
     text-align: center;
+    background-color: salmon;
+    font-family: 'Fredoka', sans-serif;
   }
   
   .App-logo {
@@ -36,3 +38,22 @@
       transform: rotate(360deg);
     }
   }
+
+.student_form{
+  background-color: salmon;
+  height: 100px;
+}
+
+.title{
+  margin: none;
+  border: none;
+}
+
+.submit_btn{
+  border: none;
+  background-color:aqua;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 10px;
+}

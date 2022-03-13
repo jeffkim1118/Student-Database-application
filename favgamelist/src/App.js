@@ -66,7 +66,6 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h1>School Database</h1>
       <CreateForm postStudent={postStudent} schools={schools}/>
       {students.map(st => <Card student={st} patchStudent={patchStudent} handleDelete={handleDelete} key={`${st.id}${st.name}`}/>)}
       </div> 
