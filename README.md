@@ -9,7 +9,8 @@
 For this project, I have decided to create a simple student database app using React frontend and Ruby Sinatra backend.
 I figured that it would be useful for me later on since I work at a middle school as a part-time IT tech.
 Here's my simple looking graphical user interface created with React framework.
-<img src="https://user-images.githubusercontent.com/64029918/158064332-a01d89a8-c376-400b-b827-bddddc1583a7.png" width="300" height="300">
+<img src="https://user-images.githubusercontent.com/64029918/158064332-a01d89a8-c376-400b-b827-bddddc1583a7.png" width="500" height="300">
+
 The top of the application contains a form component where users can type and submit new student data to my sinatra backend database.
 I used active record gem to create connections between different class models: students, schools.
 
