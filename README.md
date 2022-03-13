@@ -13,7 +13,8 @@ Here's my simple looking graphical user interface created with React framework.
 The top of the application contains a form component where users can type and submit new student data to my sinatra backend database.
 I used active record gem to create connections between different class models: students, schools.
 
-```class Student < ActiveRecord::Base
+```python
+class Student < ActiveRecord::Base
     belongs_to :school
     has_many :appointments
     has_many :teachers, through: :appointments
@@ -25,7 +26,8 @@ I used active record gem to create connections between different class models: s
         puts "Gender: #{self.gender}"
         puts "Phone number #{self.phone}"
     end 
-end```
+end
+```
 
 ![image](https://user-images.githubusercontent.com/64029918/158064647-29ebe9d2-b4fd-4e36-b6dc-7b920af11f43.png)
 
