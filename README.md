@@ -80,9 +80,13 @@ useEffect(()=> {
 ```
 
 ### NOTE
-Please start the backend server first before starting the React.
+Please start the backend server first before starting the React. Also, make sure you have node.js, Rake installed.
 
-To start the backend server, simply move to school_backend directory and type in:
+To start the backend server, simply move to school_backend directory and type into your console:
 ```Console
 bundle exec rake server
+```
+To start the React frontend, move to the favgamelist directory and type into your console:
+```Console
+npm start
 ```
