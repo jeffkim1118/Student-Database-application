@@ -29,7 +29,11 @@ class Student < ActiveRecord::Base
 end
 ```
 
-![image](https://user-images.githubusercontent.com/64029918/158064647-29ebe9d2-b4fd-4e36-b6dc-7b920af11f43.png)
+```Ruby
+class School < ActiveRecord::Base
+    has_many :students, dependent: :destroy      
+end
+```
 
 Since schools have many students, I created a one to many relationships between two of the models.
 
