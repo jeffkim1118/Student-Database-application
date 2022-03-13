@@ -40,7 +40,8 @@ Since schools have many students, I created a one to many relationships between 
 ## How does it work?
 Just like how developers makes an API calls to perform CRUD actions, I simply created an API with a database that can be called from my react frontend using simple fetch request.
 ![image](https://user-images.githubusercontent.com/64029918/158064844-fea045f7-87e4-4b5a-849b-49c151971ea7.png)
-If I submit data from my frontend, it will then proceed to make a POST request to local host server 9292 because this is the default local host server for Sinatra.
+If I submit/Patch/Delete data from my frontend, it will then proceed to make a POST/Patch/Delete request to local host server 9292 because this is the default local host server for Sinatra.
+Here's a post request that I made:
 ```Ruby
 const postStudent = (student) => {
     fetch('http://localhost:9292/students',{
@@ -58,6 +59,7 @@ const postStudent = (student) => {
 ```
 Then it will save on to my database.
 ![image](https://user-images.githubusercontent.com/64029918/158065240-63184715-3cd7-4f50-a5b4-44ed49699cf8.png)
+
 I used react hook to constantly refresh frontend whenever there's change in the data. If I make a change to my database through my frontend, then the page will refresh with new changes to the database.
 ```Ruby
 useEffect(()=> {
