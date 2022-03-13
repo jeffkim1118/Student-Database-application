@@ -13,7 +13,7 @@ Here's my simple looking graphical user interface created with React framework.
 The top of the application contains a form component where users can type and submit new student data to my sinatra backend database.
 I used active record gem to create connections between different class models: students, schools.
 
-```Sinatra
+```Ruby
 class Student < ActiveRecord::Base
     belongs_to :school
     has_many :appointments
