@@ -43,7 +43,7 @@ Since schools have many students, I created a one to many relationships between 
 Just like how developers makes an API calls to perform CRUD actions, I simply created an API with a database that can be called from my react frontend using simple fetch request.
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/64029918/158064844-fea045f7-87e4-4b5a-849b-49c151971ea7.png" width="600" height="400">
+<img src="https://user-images.githubusercontent.com/64029918/158064844-fea045f7-87e4-4b5a-849b-49c151971ea7.png" width="600" height="300">
 </div>
 
 If I submit/Patch/Delete data from my frontend, it will then proceed to make a POST/Patch/Delete request to local host server 9292 because this is the default local host server for Sinatra.
