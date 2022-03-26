@@ -39,8 +39,7 @@ function App() {
       headers:{
         'Content-Type':'application/json'
       },
-      //Do not pass extra object into the request (it's removing only the name of student when I deactivate)
-      body: JSON.stringify({active:false})
+      body: JSON.stringify({...student, active: false})
     })
     .then(res => res.json())
     .then(data => {
