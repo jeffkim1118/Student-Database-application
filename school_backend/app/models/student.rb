@@ -3,11 +3,16 @@ class Student < ActiveRecord::Base
     has_many :appointments
     has_many :teachers, through: :appointments
 
+    def returnNameAndAge
+        "#{self.student_name}-#{self.age}"
+    end
+
 
     def print 
-        puts "Name: #{self.name}"
+        puts "Name: #{self.student_name}"
         puts "Age: #{self.age}"
         puts "Gender: #{self.gender}"
         puts "Phone number #{self.phone}"
+        return self.student_name
     end 
 end
