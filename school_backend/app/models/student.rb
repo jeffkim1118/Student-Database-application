@@ -13,6 +13,8 @@ class Student < ActiveRecord::Base
         puts "Age: #{self.age}"
         puts "Gender: #{self.gender}"
         puts "Phone number #{self.phone}"
-        return self.student_name
+        self.student_name
     end 
+
+    newValue = print()
 end
