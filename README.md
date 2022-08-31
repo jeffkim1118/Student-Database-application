@@ -90,3 +90,6 @@ To start the React frontend, move to the favgamelist directory and type into you
 ```Console
 npm start
 ```
+
+### License
+MIT
